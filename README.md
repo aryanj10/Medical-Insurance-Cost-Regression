@@ -43,4 +43,28 @@ Dataset Shape: (3630, 7)
 | 5 | children | int64   | 0       | 6       |
 | 6 | charges  | float64 | 0       | 2951    |
 
+![alt text](https://github.com/aryanj10/Medical-Insurance-Cost-Regression/blob/master/boxplot_charges_sex.png "Boxplot")
+![alt text](https://github.com/aryanj10/Medical-Insurance-Cost-Regression/blob/master/boxplot_charges_smoker.png "Boxplot")
 
+## Model Building
+Split the data into train and tests sets with a test size of 20%.  
+
+I tried five different models and evaluated them using Root Mean Squared Error. I choose RMSE because it provides a measure of the model's prediction accuracy in the same units as the target variable & also it is sensitive to outliers.  
+
+Models:
+*	Linear Regression
+*	Decision Tree Regressor
+*	Random Forest Regressor
+*	XGBoost Regressor
+*	LGBM Regressor
+
+## Model performance
+The Random Forest Regressor model outperformed the other approaches on the test and validation set. 
+
+
+|    | Model               | RMSE |
+|----|--------------------|---------|
+| 0  | Random Forest Regressor                | 3331.72   |
+| 1  | XGBoost Regressor  | 3597.40   |
+| 2  | Decision Tree Regressor                 | 4453.63  |
+| 3  | Linear Regression                 | 5668.19  |
